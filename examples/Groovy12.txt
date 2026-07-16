@@ -1,0 +1,8 @@
+#readancer 1
+#cols 12
+#beats 2
+# 12-frame loop over two beats; greyed cells are unused frames
+Idle
+Wave | frames=6
+Spin
+Held | frames=1
