@@ -1,13 +1,15 @@
 name: reapack index
 
-# Builds the ReaPack index.xml from the @version/@provides metadata in
-# ReaDancer.lua and commits it back. Runs only when the script changes, so the
-# index-only commit it makes does not trigger another run.
+# Builds the ReaPack index.xml from the metadata header in Various/ReaDancer.lua
+# and commits it back. Runs when the script or this workflow changes; the
+# index-only commit it makes touches neither, so it does not trigger another run.
 
 on:
   push:
     branches: [master]
-    paths: ['Various/ReaDancer.lua']
+    paths:
+      - 'Various/ReaDancer.lua'
+      - '.github/workflows/reapack.yml'
   workflow_dispatch:
 
 permissions:
@@ -27,11 +29,14 @@ jobs:
 
       - run: gem install reapack-index
 
+      # reapack-index converts the @about markdown to RTF with pandoc
+      - run: sudo apt-get update && sudo apt-get install -y pandoc
+
       - name: Build and commit index.xml
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          reapack-index --commit \
+          reapack-index --rebuild --commit \
             --name ReaDancer \
             --ignore tests --ignore scripts --ignore examples \
             --url-template 'https://github.com/julianZ99/ReaDancer/raw/$commit/$path'
