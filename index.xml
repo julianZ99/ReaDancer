@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="ReaDancer"/>
+<index version="1" name="ReaDancer" commit="9ebf94c7608869f8398be5b89fcf3702c8c44978">
+  <category name="Various">
+    <reapack name="ReaDancer.lua" type="script" desc="ReaDancer">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 ReaDancer is a dancing character for REAPER, inspired by FL Studio's Fruity Dance. It shows a character in its own floating window that dances in time with the project, and loads Fruity Dance sprite sheets unchanged. Needs the ReaImGui extension (install it from ReaPack).\par}
+}
+]]></description>
+        <link rel="website">https://github.com/julianZ99/ReaDancer</link>
+      </metadata>
+      <version name="0.4.0" author="julianZ99" time="2026-07-17T02:02:47Z">
+        <changelog><![CDATA[First release. Load classic and extended packs, tempo-synced animation, and
+pick moves by hand, by arrangement section, or by MIDI note.]]></changelog>
+        <source main="main">https://github.com/julianZ99/ReaDancer/raw/9ebf94c7608869f8398be5b89fcf3702c8c44978/Various/ReaDancer.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
