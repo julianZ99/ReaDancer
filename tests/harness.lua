@@ -43,7 +43,7 @@ function M.load(opts)
     return realopen(path, mode)
   end
 
-  local src = realopen('ReaDancer.lua', 'r'):read('*a')
+  local src = realopen('Various/ReaDancer.lua', 'r'):read('*a')
   return assert(load(src, 'ReaDancer'))()
 end
 

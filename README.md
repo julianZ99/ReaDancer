@@ -12,8 +12,8 @@ project. Compatible with Fruity Dance spritesheets.
 
 ## Installing
 
-There's no ReaPack release yet. For now grab `ReaDancer.lua`, then in REAPER open
-the Actions list, choose New/load ReaScript, and point it at the file.
+There's no ReaPack release yet. For now grab `Various/ReaDancer.lua`, then in
+REAPER open the Actions list, choose New/load ReaScript, and point it at the file.
 
 ## Using it
 

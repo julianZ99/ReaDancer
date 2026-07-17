@@ -7,7 +7,7 @@ name: reapack index
 on:
   push:
     branches: [master]
-    paths: ['ReaDancer.lua']
+    paths: ['Various/ReaDancer.lua']
   workflow_dispatch:
 
 permissions:
