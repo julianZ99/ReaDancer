@@ -12,8 +12,17 @@ project. Compatible with Fruity Dance spritesheets.
 
 ## Installing
 
-There's no ReaPack release yet. For now grab `Various/ReaDancer.lua`, then in
-REAPER open the Actions list, choose New/load ReaScript, and point it at the file.
+ReaDancer is installable via ReaPack. In REAPER open Extensions, then ReaPack,
+then Import repositories, and paste:
+
+```
+https://github.com/julianZ99/ReaDancer/raw/master/index.xml
+```
+
+Then open Browse packages, find ReaDancer, and install it.
+
+To load it by hand instead, grab `Various/ReaDancer.lua` and point REAPER's
+New/load ReaScript at it.
 
 ## Using it
 
