@@ -1,14 +1,3 @@
---[[
-  ReaDancer: a dancing character for REAPER, on ReaImGui.
-  See FORMAT.md for the character pack format (version 1) this loader implements,
-  and DESIGN.md for how the rest is built.
-
-  Loads classic Fruity Dance packs and the extended format, renders the character
-  transparent and chrome-less, and animates it tempo-synced. Moves can be picked
-  by hand, followed from the arrangement (regions/markers), or triggered by MIDI
-  notes on a track. All controls live in the right-click menu.
-]]--
-
 -- @description ReaDancer
 -- @version 0.4.0
 -- @author julianZ99
@@ -21,6 +10,16 @@
 -- @changelog
 --   First release. Load classic and extended packs, tempo-synced animation, and
 --   pick moves by hand, by arrangement section, or by MIDI note.
+
+--[[
+  ReaDancer: a dancing character for REAPER, on ReaImGui.
+  See FORMAT.md for the character pack format (version 1) this loader implements,
+  and DESIGN.md for how the rest is built. Loads classic Fruity Dance packs and
+  the extended format, renders the character transparent and chrome-less, and
+  animates it tempo-synced. Moves can be picked by hand, from the arrangement
+  (regions/markers), or from MIDI notes on a track. Controls are in the
+  right-click menu.
+]]--
 
 local FORMAT_VERSION = 1
 local EXT_NAMESPACE  = 'ReaDancer'

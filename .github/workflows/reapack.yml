@@ -32,6 +32,8 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           reapack-index --commit \
+            --name ReaDancer \
+            --ignore tests --ignore scripts --ignore examples \
             --url-template 'https://github.com/julianZ99/ReaDancer/raw/$commit/$path'
 
       - name: Push
