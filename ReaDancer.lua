@@ -9,6 +9,19 @@
   notes on a track. All controls live in the right-click menu.
 ]]--
 
+-- @description ReaDancer
+-- @version 0.4.0
+-- @author julianZ99
+-- @link https://github.com/julianZ99/ReaDancer
+-- @about
+--   ReaDancer is a dancing character for REAPER, inspired by FL Studio's Fruity
+--   Dance. It shows a character in its own floating window that dances in time
+--   with the project, and loads Fruity Dance sprite sheets unchanged. Needs the
+--   ReaImGui extension (install it from ReaPack).
+-- @changelog
+--   First release. Load classic and extended packs, tempo-synced animation, and
+--   pick moves by hand, by arrangement section, or by MIDI note.
+
 local FORMAT_VERSION = 1
 local EXT_NAMESPACE  = 'ReaDancer'
 

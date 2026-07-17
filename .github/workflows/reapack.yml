@@ -1,0 +1,38 @@
+name: reapack index
+
+# Builds the ReaPack index.xml from the @version/@provides metadata in
+# ReaDancer.lua and commits it back. Runs only when the script changes, so the
+# index-only commit it makes does not trigger another run.
+
+on:
+  push:
+    branches: [master]
+    paths: ['ReaDancer.lua']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # reapack-index reads the full git history
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - run: gem install reapack-index
+
+      - name: Build and commit index.xml
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          reapack-index --commit \
+            --url-template 'https://github.com/julianZ99/ReaDancer/raw/$commit/$path'
+
+      - name: Push
+        run: git push

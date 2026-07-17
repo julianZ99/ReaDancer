@@ -213,6 +213,5 @@ is a ReaPack dependency users install separately.
   the character shows, movable by dragging it, controls via right-click menu.
 - **v0.4** (done): section-following, where the arrangement (regions and markers)
   picks the move, and MIDI-note triggering, where notes on a track pick it.
-- **v1.0**: published ReaPack index, self-made example characters, docs.
-- **post-1.0**: several characters on screen at once, the way Fruity Dance
-  allows.
+- **v1.0**: published ReaPack index, a self-made example character, several
+  dancers on screen at once (the way Fruity Dance allows), docs.
